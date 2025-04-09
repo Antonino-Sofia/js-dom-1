@@ -44,13 +44,18 @@ function accendiLampadina() {
 }
 
 function spegniLampadina() {
+  const bulbElement = document.getElementById("bulb");
+  console.log(bulbElement);
 
-    const bulbElement = document.getElementById('bulb');
-    console.log(bulbElement);
-
-    const buttonElement = document.getElementById('switch');
+  const buttonElement = document.getElementById("switch");
   console.log(buttonElement);
 
-  bulbElement.src = 'img/white_lamp.png';
-  bulbElement.alt = 'Lampadina Spenta';
-  buttonElement.innerText = 'Accendi';
+  bulbElement.src = "img/white_lamp.png";
+  bulbElement.alt = "Lampadina Spenta";
+  buttonElement.innerText = "Accendi";
+
+  console.log("spegni lampadina");
+
+  buttonElement.removeEventListener("click", spegniLampadina);
+  buttonElement.addEventListener("click", accendiLampadina);
+}
