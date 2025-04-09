@@ -42,3 +42,15 @@ function accendiLampadina() {
   buttonElement.removeEventListener("click", accendiLampadina);
   buttonElement.addEventListener("click", spegniLampadina);
 }
+
+function spegniLampadina() {
+
+    const bulbElement = document.getElementById('bulb');
+    console.log(bulbElement);
+
+    const buttonElement = document.getElementById('switch');
+  console.log(buttonElement);
+
+  bulbElement.src = 'img/white_lamp.png';
+  bulbElement.alt = 'Lampadina Spenta';
+  buttonElement.innerText = 'Accendi';
