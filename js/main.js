@@ -14,3 +14,15 @@ console.log(bulbElement);
 //bottone
 buttonElement = document.getElementById("switch");
 console.log(buttonElement);
+//esercizio di default
+buttonElement.addEventListener('click', function () {
+console.log("click bottone");
+
+console.log(bulbElement.src);
+console.log(bulbElement.id);
+console.log(bulbElement.alt);
+
+bulbElement.src = "img/yellow_lamp.png";
+bulbElement.alt = "Lamapadina accesa";
+//BONUS
+
